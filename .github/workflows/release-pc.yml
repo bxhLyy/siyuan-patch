@@ -64,6 +64,7 @@ jobs:
         if: matrix.config.goos == 'linux' && matrix.config.goarch == 'arm64'
         run: |
           echo "Installing ARM64 cross compiler..."
+          ls /github/workspace
           ln -s ${{ github.workspace }} /github/workspace
           apt-get update
           apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
