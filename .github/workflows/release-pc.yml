@@ -64,14 +64,13 @@ jobs:
         if: matrix.config.goos == 'linux' && matrix.config.goarch == 'arm64'
         run: |
           echo "Installing ARM64 cross compiler..."
-          export HOME=/root
-          rm -f /var/lib/apt/lists/lock
           apt-get update
           apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           apt-get install -y  git
 
       - name: clone origin and apply patches
         run: |
+          ln -s ${{ github.workspace }} /github/workspace
           mkdir -p ${{ github.workspace }}/go
           cd ${{ github.workspace }}/siyuan-note/
 
