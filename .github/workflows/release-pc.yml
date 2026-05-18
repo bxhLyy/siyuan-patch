@@ -52,7 +52,7 @@ jobs:
             electron_args: "dist-linux-arm64"
             goos: "linux"
             goarch: "arm64"
-            suffix: "linux-arm64.deb"
+            suffix: "linux-arm64.tar.gz"
 
     steps:
       - uses: actions/checkout@v4
