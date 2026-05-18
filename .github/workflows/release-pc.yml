@@ -60,7 +60,7 @@ jobs:
         with:
           path: siyuan-note
 
-       - name: Install ARM64 Cross Compiler
+      - name: Install ARM64 Cross Compiler
         if: matrix.config.goos == 'linux' && matrix.config.goarch == 'arm64'
         run: |
           echo "Installing ARM64 cross compiler..."
