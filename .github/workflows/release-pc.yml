@@ -129,7 +129,7 @@ jobs:
         working-directory: ${{ github.workspace }}/siyuan-note/siyuan/kernel
         env:
           GO111MODULE: on
-          CGO_ENABLED: ${{ matrix.config.goarch == 'arm64' && matrix.config.goos == 'linux' && '0' || '1' }}
+          CGO_ENABLED: 1
           GOOS: ${{ matrix.config.goos }}
           GOPATH: ${{ github.workspace }}/go
           GOARCH: ${{ matrix.config.goarch }}
