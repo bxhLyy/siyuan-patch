@@ -69,7 +69,6 @@ jobs:
           ln -s  ${GITHUB_WORKSPACE} ${{ github.workspace }}
           ls ${GITHUB_WORKSPACE} -lh
           ls ${{ github.workspace }}/siyuan-note -lh
-          exit 1
           apt-get update
           apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           apt-get install -y  git
@@ -90,7 +89,6 @@ jobs:
           git apply ${{ github.workspace }}/siyuan-note/patches/siyuan/mock-vip-user.patch
 
           git status
-          exit 1
      
           
       - name: Set up MingGW
