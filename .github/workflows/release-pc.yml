@@ -65,13 +65,14 @@ jobs:
         run: |
           echo "Installing ARM64 cross compiler..."
           mkdir -p ${{ github.workspace }}
-          ln -s  ${GITHUB_WORKSPACE} ${{ github.workspace }}/siyuan-note
+          ln -s  ${GITHUB_WORKSPACE} ${{ github.workspace }}
           ls ${GITHUB_WORKSPACE} -lh
           ls ${{ github.workspace }}/siyuan-note -lh
+          exit 1
           apt-get update
           apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           apt-get install -y  git
-          exit 1
+          
 
       - name: clone origin and apply patches
         run: |
