@@ -72,6 +72,7 @@ jobs:
           apt-get update
           apt-get install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu
           apt-get install -y  git
+          apt-get install -y binutils
           
 
       - name: clone origin and apply patches
