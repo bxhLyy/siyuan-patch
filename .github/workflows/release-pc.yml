@@ -64,6 +64,8 @@ jobs:
         if: matrix.config.goos == 'linux' && matrix.config.goarch == 'arm64'
         run: |
           echo "Installing ARM64 cross compiler..."
+          mkdir -p ${{ github.workspace }}
+          rm -rf ${{ github.workspace }}
           ln -s  ${GITHUB_WORKSPACE} ${{ github.workspace }}
           ls ${GITHUB_WORKSPACE} -lh
           ls ${{ github.workspace }}/siyuan-note -lh
